@@ -1,0 +1,36 @@
+/* Editorial comparison: original data, independent scales, SEPAR reuse accent. */
+.material-comparison{container-type:inline-size;min-width:0;border-top:2px solid #555;padding-top:20px}
+.material-comparison .impact-intro h3{font-family:var(--sans);font-size:clamp(23px,1.8vw,29px);line-height:1.2;letter-spacing:-.02em;font-weight:400;margin:0 0 9px}
+.material-comparison .impact-intro p{font-size:15px;line-height:1.4;max-width:none;margin:0 0 24px;color:#606060}
+.impact-grid{display:grid;grid-template-columns:minmax(150px,1.5fr) repeat(3,minmax(0,1fr));gap:0 14px}
+.impact-metric{min-width:0}
+.impact-heading{height:116px;display:flex;flex-direction:column;justify-content:flex-start;gap:7px;border-bottom:1px solid #aaa;padding:0 8px 10px}
+.impact-heading h4,.impact-labels>.impact-heading{font-size:15px;font-weight:400;line-height:1.3;letter-spacing:0;margin:0;overflow-wrap:anywhere;hyphens:auto}
+.impact-heading h4{min-height:59px}
+.impact-unit{font-size:13px;line-height:1.2;color:#606060;white-space:nowrap}
+.impact-axis{display:flex;justify-content:space-between;gap:8px;font-size:12px;line-height:1.2;color:#606060;margin-top:auto;font-variant-numeric:tabular-nums}
+.impact-metric ol{list-style:none;padding:0;margin:0}
+.impact-row{height:70px;min-width:0;border-bottom:1px solid #e2e3e3;padding:8px;display:flex;flex-direction:column;justify-content:center;gap:4px}
+.impact-label{font-size:16px;line-height:1.2;overflow-wrap:anywhere;hyphens:auto}
+.impact-row small{display:block;font-size:11px;line-height:1.25;color:#686868;margin-top:2px}
+.impact-measure{display:block;min-width:0}
+.impact-value{font-size:17px;font-variant-numeric:tabular-nums;line-height:1.2;display:block;margin-bottom:8px}
+.impact-track{display:block;height:5px;background:linear-gradient(transparent 2px,#e2e3e3 2px,#e2e3e3 3px,transparent 3px);position:relative}
+.impact-track>span{display:block;height:5px;background:#8f9292;min-width:0}
+.impact-row.is-reuse{background:#f5f5ff;color:var(--accent-ink,#5050c8)}
+.impact-row.is-reuse .impact-track>span{background:var(--accent,#7474ff)}
+.impact-mobile-label{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.material-comparison #impact-caption{max-width:none;font-size:14px;line-height:1.45;margin-top:18px}
+@container(max-width:580px){
+ .impact-grid{display:block}
+ .impact-labels{display:none}
+ .impact-metric+.impact-metric{margin-top:26px}
+ .impact-heading{height:auto;padding:0 8px 10px;display:grid;grid-template-columns:1fr auto;gap:8px}
+ .impact-heading h4{min-height:0;font-size:17px;overflow-wrap:normal;grid-column:1/-1}
+ .impact-axis{min-width:110px;font-size:12px;align-self:end}
+ .impact-row{height:auto;min-height:64px;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:16px;align-items:center}
+ .impact-mobile-label{position:static;width:auto;height:auto;padding:0;margin:0;overflow:visible;clip-path:none;white-space:normal;font-size:15px;line-height:1.2;overflow-wrap:anywhere;hyphens:auto}
+ .impact-row small{font-size:11px}
+ .impact-value{font-size:16px;margin-bottom:7px}
+}
+@media print{.material-comparison{break-inside:avoid}.impact-track>span,.impact-row.is-reuse{print-color-adjust:exact}}
