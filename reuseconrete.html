@@ -13,10 +13,13 @@
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=spr-20261028">
     <link rel="stylesheet" href="styles.css?v=20261028-interface-2">
     <script src="content.js" defer></script>
-    <script src="app.js" defer></script>
+    <script src="assets/contact-copy.js?v=20261028-forms-1" defer></script>
+    <script src="app.js?v=20261028-forms-1" defer></script>
+    <script src="assets/contact-forms.js?v=20261028-forms-1" defer></script>
     <link rel="stylesheet" href="assets/type-scale.css?v=20261028-1">
   <link rel="stylesheet" href="assets/interface-refinements.css?v=20261028-3">
   <link rel="stylesheet" href="assets/reference-links.css?v=20261028-1">
+<link rel="stylesheet" href="assets/contact-forms.css?v=20261028-forms-1">
 </head>
   <body data-page="field-article">
     <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
@@ -31,12 +34,12 @@
         <div class="language-picker"><label class="language-native"><span class="sr-only" data-i18n="language">Language</span><select id="language" aria-label="Language"><option value="en">EN</option><option value="de">DE</option><option value="fr">FR</option><option value="it">IT</option></select></label>
 <button type="button" class="language-toggle" aria-label="Language" data-i18n-aria="language" aria-haspopup="listbox" aria-expanded="false" aria-controls="language-options" hidden><span class="language-code">EN</span><svg aria-hidden="true" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4"><path d="m2 4 4 4 4-4"/></svg></button>
 <div class="language-options" id="language-options" role="listbox" aria-label="Language" data-i18n-aria="language" hidden><button type="button" class="language-option" role="option" data-language="en" aria-selected="true" tabindex="-1"><span>EN</span><span lang="en">English</span></button><button type="button" class="language-option" role="option" data-language="de" aria-selected="false" tabindex="-1"><span>DE</span><span lang="de">Deutsch</span></button><button type="button" class="language-option" role="option" data-language="fr" aria-selected="false" tabindex="-1"><span>FR</span><span lang="fr">Français</span></button><button type="button" class="language-option" role="option" data-language="it" aria-selected="false" tabindex="-1"><span>IT</span><span lang="it">Italiano</span></button></div></div>
-        <button type="button" class="header-contact text-button" data-contact data-i18n="contactUs">Contact us</button>
+        <button type="button" class="header-contact text-button" data-contact="general" data-i18n="enquiryGeneral">Project enquiry</button>
         <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu" data-i18n-aria="openMenu"><span></span><span></span></button>
       </div>
     </header>
     <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation" data-i18n-aria="mobileNav" hidden>
-      <a href="index.html#solutions" data-preserve-lang data-i18n="navAudit">Services</a><a href="index.html#research" data-preserve-lang data-i18n="navResearch">Research</a><button type="button" class="text-button" data-contact data-i18n="contactUs">Contact us</button>
+      <a href="index.html#solutions" data-preserve-lang data-i18n="navAudit">Services</a><a href="index.html#research" data-preserve-lang data-i18n="navResearch">Research</a><button type="button" class="text-button" data-contact="general" data-i18n="enquiryGeneral">Project enquiry</button>
     </nav>
     <main id="main" class="field-article container"><article aria-labelledby="article-title">
 <a data-i18n="articleBack" class="article-back text-link" href="index.html#roadmap" data-preserve-lang>View the research roadmap</a>
@@ -57,9 +60,9 @@
 <figure class="article-figure"><img src="assets/concrete-step-13.jpg" width="1488" height="837" loading="lazy" alt="A cut concrete wall panel being moved by crane." data-i18n-alt="articleImage13Caption"><figcaption data-i18n="articleImage13Caption">A cut concrete wall panel being moved by crane.</figcaption></figure></div></section>
 <section class="article-section" id="step-6" aria-labelledby="step-6-title"><div class="article-step-copy"><span class="article-step-number" aria-hidden="true">06</span><h2 data-i18n="articleStep6Title" id="step-6-title">Indicative cutting costs</h2><p data-i18n="articleStep6P1">The February 2025 field report recorded an indicative cutting rate of <strong>CHF 155 per m² of cut surface</strong> for reinforced concrete 150–200 mm thick. For the example slab, <strong>7 × 1.5 × 0.2 m</strong>, the reported CHF 527 can be reconstructed by allowing for cuts along all four edges:</p><table class="article-cost-table"><caption data-i18n="articleCostCaption">The 7 × 1.5 × 0.2 m slab, with cuts along four edges</caption><tbody><tr><th data-i18n="articleCostLabel1" scope="row">Slab area</th><td data-i18n="articleCostValue1">7 × 1.5 = 10.5 m²</td></tr><tr><th data-i18n="articleCostLabel2" scope="row">Concrete volume</th><td data-i18n="articleCostValue2">7 × 1.5 × 0.2 = 2.1 m³</td></tr><tr><th data-i18n="articleCostLabel3" scope="row">Total cutting length</th><td data-i18n="articleCostValue3">2 × (7 + 1.5) = 17 m</td></tr><tr><th data-i18n="articleCostLabel4" scope="row">Cut surface</th><td data-i18n="articleCostValue4">17 × 0.2 = 3.4 m²</td></tr><tr><th data-i18n="articleCostLabel5" scope="row">Indicative cutting rate</th><td data-i18n="articleCostValue5">CHF 155 / m² of cut surface</td></tr><tr><th data-i18n="articleCostLabel6" scope="row">Calculated cutting cost</th><td data-i18n="articleCostValue6">3.4 × 155 = CHF 527</td></tr></tbody></table><p data-i18n="articleStep6P3"><strong>CHF 527 covers cutting.</strong> The full cost of a component ready for use also includes building and material assessment, lifting, transport, storage, preparation and assembly. SEPAR’s production-chain research examines these costs and the gaps in the available data.</p><p data-i18n="articleStep6P2">The original report used <strong>CHF 630</strong> as the comparator for a new in-situ slab. The <strong>CHF 103 difference, around 16%</strong>, compares that figure with cutting alone. The report also proposed a <strong>40% reduction</strong> as a target for an industrialised approach.</p></div><div class="article-gallery article-gallery-1"><figure class="article-figure"><img src="assets/concrete-step-14.jpg" width="1680" height="945" loading="lazy" alt="The diamond blade used for concrete cutting." data-i18n-alt="articleImage14Caption"><figcaption data-i18n="articleImage14Caption">The diamond blade used for concrete cutting.</figcaption></figure></div></section>
 <section class="article-section" id="step-7" aria-labelledby="step-7-title"><div class="article-step-copy"><span class="article-step-number" aria-hidden="true">07</span><h2 data-i18n="articleStep7Title" id="step-7-title">Assessment for component reuse</h2><p data-i18n="articleStep7P1">Crushing concrete supplies aggregate for a subsequent production cycle. Component reuse retains the existing element and its manufactured geometry. Assessing these recovery routes requires consideration of condition, processing, transport and the intended application.</p><p data-i18n="articleStep7P2">The original article referred to <a href="https://repository.tudelft.nl/record/uuid:20002372-1d7d-4824-8217-bdff4b60ecb5" target="_blank" rel="noopener noreferrer">Alexandros Glias’s 2013 study, <em>The “Donor Skelet”: Designing with reused structural concrete elements</em></a>. Its comparison illustrates why recovery routes deserve examination: recycling still involves processing and new concrete production, while component reuse can retain more of the existing product. The environmental result depends on the material, processing and transport needed for the specific project.</p><p data-i18n="articleStep7P3">The visit informed SEPAR’s research into the assessment, recovery, transport and fabrication of reclaimed-concrete components. The development roadmap documents subsequent prototype assembly and laboratory testing, followed by the planned full-scale demonstrator.</p></div><div class="article-gallery article-gallery-1"><figure class="article-figure"><img src="assets/concrete-step-15.png" width="533" height="434" loading="lazy" alt="Comparison of mineral resources, primary energy and global warming potential for concrete production and reuse routes. Figure reproduced from the original article’s reference to Glias, 2013." data-i18n-alt="articleImage15Caption"><figcaption data-i18n="articleImage15Caption">Comparison of mineral resources, primary energy and global warming potential for concrete production and reuse routes. Figure reproduced from the original article’s reference to Glias, 2013.</figcaption></figure></div></section>
-<div class="article-conclusion"><div><p data-i18n="articleCredit" class="article-credit">Site photographs: SEPAR, 2025. Research figure: Glias, 2013, as reproduced in the original article.</p></div><div class="article-actions"><a data-i18n="articleBack" class="article-back text-link" href="index.html#roadmap" data-preserve-lang>View the research roadmap</a><button type="button" data-i18n="contactUs" class="button dark" data-contact>Contact us</button></div></div>
+<div class="article-conclusion"><div><p data-i18n="articleCredit" class="article-credit">Site photographs: SEPAR, 2025. Research figure: Glias, 2013, as reproduced in the original article.</p></div><div class="article-actions"><a data-i18n="articleBack" class="article-back text-link" href="index.html#roadmap" data-preserve-lang>View the research roadmap</a><button type="button" data-i18n="enquiryAdvisory" class="button dark" data-contact="advisory">Discuss concrete reuse</button></div></div>
 </article></main>
-    <div id="contact" class="contact-section"><div class="container contact-inner"><div><h2 data-i18n="contactHeading">Contact.</h2><p data-i18n="contactBody">Building assessments, material recovery and research collaboration.</p></div><div class="contact-actions"><a href="mailto:separ@separ.ch" data-i18n="emailUs">Email us</a></div></div></div>
+    <div id="contact" class="contact-section"><div class="container contact-inner"><div><h2 data-i18n="contactHeading">Contact.</h2><p data-i18n="contactBody">Building assessments, material recovery and research collaboration.</p></div><div class="contact-actions"><button type="button" class="button" data-contact="advisory" data-i18n="enquiryAdvisory">Discuss concrete reuse</button></div></div></div>
 <footer class="site-footer container">
       <div class="footer-main">
         <a class="wordmark" href="index.html" data-preserve-lang aria-label="SEPAR home">SEPAR</a>
@@ -69,27 +72,33 @@
       </div>
       
     <nav class="social-links" aria-label="SEPAR social and email links"><a href="mailto:separ@separ.ch" data-i18n="emailUs">Email us</a><a href="https://www.instagram.com/demolition.ch/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://www.linkedin.com/company/separch/" target="_blank" rel="noopener noreferrer">LinkedIn</a></nav></footer>
-    <dialog id="contact-dialog" aria-labelledby="dialog-title">
-      <button type="button" class="dialog-close" aria-label="Close" data-i18n-aria="close">
-        ×</button>
-      <h2 id="dialog-title" data-i18n="dialogTitle">Tell us about your project</h2>
-      <p data-i18n="dialogBody">For an urban-mining assessment, send a building address, portfolio list or study area and the decision you need to make. For research, describe the materials, application or research question you want to explore.</p>
-      <a class="button dark" href="https://cal.read.ai/separ" target="_blank" rel="noopener noreferrer"><span data-i18n="schedule">Schedule a call</span></a><a class="button outline" href="mailto:separ@separ.ch"><span data-i18n="emailUs">Email us</span></a>
-      
+    <dialog id="contact-dialog" aria-labelledby="dialog-title" aria-describedby="enquiry-lead">
+      <button type="button" class="dialog-close" aria-label="Close" data-i18n-aria="close">×</button>
+      <h2 id="dialog-title">Tell us about your project</h2>
+      <p id="enquiry-lead" class="enquiry-lead">Describe the question you would like SEPAR to help you address.</p>
+      <form id="enquiry-form">
+        <fieldset class="enquiry-grid">
+          <div class="enquiry-field enquiry-wide"><label for="enquiry-topic" data-i18n="enquiryTopic">Your enquiry</label><select id="enquiry-topic" name="topic"></select></div>
+          <div class="enquiry-field"><label for="enquiry-name" data-i18n="enquiryName">Name (optional)</label><input id="enquiry-name" name="name" autocomplete="name" maxlength="120"></div>
+          <div class="enquiry-field"><label for="enquiry-email" data-i18n="enquiryEmail">Email</label><input id="enquiry-email" name="email" type="email" autocomplete="email" maxlength="254" required></div>
+          <div class="enquiry-field"><label for="enquiry-phone" data-i18n="enquiryPhone">Phone (optional)</label><input id="enquiry-phone" name="phone" type="tel" autocomplete="tel" maxlength="60"></div>
+          <div class="enquiry-field"><label for="enquiry-organisation" data-i18n="enquiryOrganisation">Organisation (optional)</label><input id="enquiry-organisation" name="organisation" autocomplete="organization" maxlength="160"></div>
+          <div class="enquiry-field enquiry-wide"><label for="enquiry-address" id="enquiry-location-label">Address or study area (optional)</label><input id="enquiry-address" name="address" autocomplete="street-address" maxlength="500"></div>
+          <div class="enquiry-field enquiry-wide"><label for="enquiry-message" id="enquiry-message-label">Message</label><textarea id="enquiry-message" name="message" rows="4" maxlength="6000" required></textarea></div>
+          <div class="enquiry-trap" aria-hidden="true"><label for="enquiry-website">Website</label><input id="enquiry-website" name="_honey" tabindex="-1" autocomplete="off"></div>
+        </fieldset>
+        <p class="enquiry-privacy"><span data-i18n="enquiryPrivacy">SEPAR uses your details to respond to this enquiry.</span> <button type="button" data-privacy data-i18n="enquiryPrivacyLink">Privacy information</button></p>
+        <p id="enquiry-status" class="enquiry-status" role="alert" tabindex="-1"></p>
+        <div class="enquiry-actions"><button class="button" type="submit" data-i18n="enquirySend">Send enquiry</button></div>
+      </form>
+      <div id="enquiry-success" hidden><p id="enquiry-success-text" role="status" tabindex="-1" data-i18n="enquirySuccess">Thank you. Your enquiry has been sent to SEPAR. We will reply using the contact details you provided.</p><button type="button" class="button" id="enquiry-done" data-i18n="enquiryDone">Close</button></div>
     </dialog>
     <dialog id="privacy-dialog" aria-labelledby="privacy-title">
       <button type="button" class="dialog-close" aria-label="Close" data-i18n-aria="close">
         ×</button><span class="company-name">SEPAR SÀRL</span>
       <h2 id="privacy-title" data-i18n="privacy">Privacy &amp; site information</h2>
-      <p data-i18n="privacyBody">
-        This website runs without analytics or advertising cookies. Your
-        language choice is saved in this browser. Contact links open your email
-        application or an external scheduling service; those services apply
-        their own privacy policies.
-      </p>
-      <p data-i18n="privacyContact">
-        For questions about this website, contact separ@separ.ch.
-      </p>
+      <p data-i18n="privacyBody">This website uses no analytics or advertising cookies. Your language choice is saved in your browser. Enquiry forms send your contact details, message and project context to SEPAR through FormSubmit, which retains submissions for 30 days. SEPAR uses these details to respond to your request. The enquiry is also retained in SEPAR’s email correspondence. See <a href="https://formsubmit.co/privacy.pdf" target="_blank" rel="noopener noreferrer">FormSubmit’s privacy policy</a>.</p>
+      <p data-i18n="privacyContact">For questions about your data, use the enquiry form or the Email us link at the bottom of the page.</p>
       <address>SEPAR SÀRL<br><a class="address-link" data-i18n="officeLausanne" href="https://www.google.com/maps/search/?api=1&amp;query=Av.%20Gratta-Paille%202%2C%20Lausanne%2C%20Switzerland" target="_blank" rel="noopener noreferrer">Av. Gratta-Paille 2, Lausanne, Switzerland</a><a class="address-link" data-i18n="officeBasel" href="https://www.google.com/maps/search/?api=1&amp;query=Steinenvorstadt%2036%2C%20Basel%2C%20Switzerland" target="_blank" rel="noopener noreferrer">Steinenvorstadt 36, Basel, Switzerland</a></address>
     </dialog>
     <script src="assets/language-picker.js?v=20261028-1"></script>

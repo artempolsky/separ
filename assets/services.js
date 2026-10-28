@@ -64,29 +64,5 @@
   new ResizeObserver(alignRows).observe(panels);
   new MutationObserver(alignRows).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});
   document.fonts.ready.then(alignRows);
-  const request=document.querySelector('#address-request');
-  const address=document.querySelector('#property-address');
-  const summary=document.querySelector('#address-summary');
-  const mail=document.querySelector('#contact-dialog a[href^="mailto:"]');
-  let requestedAddress='';
-  function updateAddress(){
-    if(!requestedAddress)return;
-    summary.querySelector('p').textContent=requestedAddress;
-    summary.hidden=false;
-    const label=summary.querySelector('[data-i18n]').textContent.trim();
-    mail.href='mailto:separ@separ.ch?body='+encodeURIComponent(label+': '+requestedAddress+'\n\n');
-  }
-  if(request&&address&&summary&&mail){
-    address.addEventListener('input',()=>address.setCustomValidity(''));
-    request.addEventListener('submit',event=>{
-      event.preventDefault();
-      if(!address.value.trim()){
-        address.setCustomValidity(request.querySelector('label').textContent);
-        address.reportValidity();return;
-      }
-      requestedAddress=address.value.trim();updateAddress();
-      document.querySelector('.header-contact[data-contact]').click();
-    });
-    document.querySelector('#language').addEventListener('change',()=>queueMicrotask(updateAddress));
-  }
+  // Contextual requests and address hand-off live in contact-forms.js.
 })();

@@ -310,17 +310,15 @@
   const contactDialog = document.querySelector("#contact-dialog");
   const privacyDialog = document.querySelector("#privacy-dialog");
   let previousOverflow = "";
+  let dialogScrollLocked = false;
   function openDialog(dialog) {
     if (dialog.open) return;
-    previousOverflow = document.body.style.overflow;
+    if (!dialogScrollLocked) previousOverflow = document.body.style.overflow;
+    dialogScrollLocked = true;
     document.body.style.overflow = "hidden";
     dialog.showModal();
   }
-  document
-    .querySelectorAll("[data-contact]")
-    .forEach((el) =>
-      el.addEventListener("click", () => openDialog(contactDialog)),
-    );
+  document.addEventListener('separ:contact-open', () => openDialog(contactDialog));
   document
     .querySelectorAll("[data-privacy]")
     .forEach((el) =>
@@ -342,7 +340,10 @@
         dialog.close();
     });
     dialog.addEventListener("close", () => {
-      document.body.style.overflow = previousOverflow;
+      if (!document.querySelector('dialog[open]')) {
+        document.body.style.overflow = previousOverflow;
+        dialogScrollLocked = false;
+      }
     });
   }
 
