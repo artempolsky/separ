@@ -1,0 +1,7 @@
+/* Caption and helper sizes aligned to the existing Neue Haas site hierarchy. */
+.address-request label,.address-entry label,#address-request label{font-size:15px;line-height:1.4}
+.address-helper{font-size:16px;line-height:1.45}
+.vision-media figcaption,.values-image figcaption,.values-visual figcaption,.map-caption,.map-caption a,.article-figure figcaption,.article-section figcaption,.article-gallery figcaption{font-size:15px;line-height:1.45}
+[data-i18n="valuesCredit"],.map-sources summary{font-size:15px;line-height:1.45}
+/* Keep the TRL control transparent during hover, focus and the open state. */
+.trl-trigger,.trl-trigger:hover,.trl-trigger:focus,.trl-trigger:active,.trl-trigger[aria-expanded=true]{background:transparent}

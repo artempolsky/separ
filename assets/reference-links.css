@@ -1,0 +1,6 @@
+/* Inline references and physical addresses use the site's quiet text-link role. */
+.team-bio p a,address .address-link{color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-decoration-color:#999;text-underline-offset:3px}
+.team-bio p a:hover,address .address-link:hover{text-decoration-color:currentColor;color:#454545}
+.team-bio p a:focus-visible,address .address-link:focus-visible{outline:2px solid #555;outline-offset:3px}
+address .address-link{display:block;width:fit-content;max-width:100%;overflow-wrap:break-word}
+address .address-link+.address-link{margin-top:4px}

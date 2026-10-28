@@ -1,0 +1,37 @@
+/* Fifth product only. Native SEPAR geometry and deliberately selective detail. */
+.service-catalogue.product-cards-v2 .np-custom-workspace{display:flex;flex-direction:column;flex:1;min-width:0}
+.service-catalogue.product-cards-v2 .np-custom-body{display:flex;flex-direction:column;gap:18px;padding:20px;flex:1;min-height:0;min-width:0}
+.service-catalogue.product-cards-v2 .np-project-brief{border-left:2px solid #7474ff;background:#f5f5f3;padding:14px 16px;flex:none}
+.service-catalogue.product-cards-v2 .np-project-brief small{display:block;font-size:12px;line-height:1.4;color:#606060;margin-bottom:7px}
+.service-catalogue.product-cards-v2 .np-project-brief p{font-size:clamp(16px,1.1vw,22px);line-height:1.3;color:#222;margin:0}
+.service-catalogue.product-cards-v2 .np-source-register{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;flex:none}
+.service-catalogue.product-cards-v2 .np-source{border:1px solid #e5e5e5;min-width:0;padding:12px;display:flex;flex-direction:column;gap:7px}
+.service-catalogue.product-cards-v2 .np-source h6{font-size:12px;line-height:1.35;min-height:2.7em}
+.service-catalogue.product-cards-v2 .np-source svg{width:19px;height:21px;color:#777;margin-bottom:2px;flex:none}
+.service-catalogue.product-cards-v2 .np-source .np-ghost{height:4px;min-height:4px}
+.service-catalogue.product-cards-v2 .np-custom-analysis{display:flex;flex-direction:column;flex:1;min-height:0;gap:10px}
+.service-catalogue.product-cards-v2 .np-custom-analysis>h6{font-size:13px;color:#444}
+.service-catalogue.product-cards-v2 .np-custom-result{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);border:1px solid #e7e7e7;flex:1;min-height:0}
+.service-catalogue.product-cards-v2 .np-custom-map{min-width:0;min-height:0;position:relative;overflow:hidden;background:#f5f5f3}
+.service-catalogue.product-cards-v2 .np-custom-map>img,.service-catalogue.product-cards-v2 .np-custom-map>svg{position:absolute;width:100%;height:100%;inset:0;object-fit:cover}
+.service-catalogue.product-cards-v2 .np-map-marker{position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;width:24px;height:24px;border:2px solid white;border-radius:50%;background:#7474ff;color:white;font-size:12px;line-height:1}
+.service-catalogue.product-cards-v2 .np-priorities{padding:14px 10px;border-left:1px solid #e7e7e7;min-width:0}
+.service-catalogue.product-cards-v2 .np-priorities h6{font-size:12px;line-height:1.4;margin-bottom:14px}
+.service-catalogue.product-cards-v2 .np-priority{display:flex;gap:9px;align-items:center;padding:10px 6px;border-top:1px solid #ececec}
+.service-catalogue.product-cards-v2 .np-priority:first-of-type{background:#ededfa;border-top-color:transparent}
+.service-catalogue.product-cards-v2 .np-priority>b{font-size:12px;font-weight:400;color:#5050a0;flex:none}
+.service-catalogue.product-cards-v2 .np-priority>div{min-width:0;flex:1;display:flex;flex-direction:column;gap:7px}
+.service-catalogue.product-cards-v2 .np-priority .np-ghost{height:4px;min-height:4px}
+.service-catalogue.product-cards-v2 .np-decision-brief{display:flex;align-items:center;gap:20px;padding-top:14px;border-top:1px solid #e5e5e5;flex:none}
+.service-catalogue.product-cards-v2 .np-decision-brief h6{font-size:12px;line-height:1.4;max-width:40%;flex:none}
+.service-catalogue.product-cards-v2 .np-decision-brief>div{flex:1;min-width:0;display:flex;flex-direction:column;gap:7px}
+.service-catalogue.product-cards-v2 .custom-project-scope .case-meta{min-height:0;margin-bottom:12px}
+.service-catalogue.product-cards-v2 .np-custom-result{grid-template-rows:minmax(0,1fr)}
+.service-catalogue.product-cards-v2 .np-priorities{min-height:0;display:flex;flex-direction:column}
+.service-catalogue.product-cards-v2 .np-priorities h6{flex:none}
+.service-catalogue.product-cards-v2 .np-priority{flex:1;min-height:0}
+@media(min-width:1800px){.service-catalogue.product-cards-v2 .np-custom-body{padding:26px;gap:20px}.service-catalogue.product-cards-v2 .np-custom-workspace :is(h6,.np-project-brief small){font-size:14px}.service-catalogue.product-cards-v2 .np-source{padding:14px}.service-catalogue.product-cards-v2 .np-priorities{padding:18px 14px}}
+@media(max-width:600px){.service-catalogue.product-cards-v2 .np-custom-body{padding:12px;gap:14px}.service-catalogue.product-cards-v2 .np-project-brief{padding:11px 12px}.service-catalogue.product-cards-v2 .np-project-brief p{font-size:16px}.service-catalogue.product-cards-v2 .np-project-brief small{font-size:11px}.service-catalogue.product-cards-v2 .np-source-register{gap:6px}.service-catalogue.product-cards-v2 .np-source{padding:8px 6px;gap:6px}.service-catalogue.product-cards-v2 .np-source h6{font-size:10px;min-height:2.7em}.service-catalogue.product-cards-v2 .np-source svg{width:16px;height:18px}.service-catalogue.product-cards-v2 .np-custom-analysis>h6{font-size:12px}.service-catalogue.product-cards-v2 .np-priorities{padding:10px 6px}.service-catalogue.product-cards-v2 .np-priorities h6{font-size:10px;margin-bottom:8px}.service-catalogue.product-cards-v2 .np-priority{padding:8px 4px;gap:6px}.service-catalogue.product-cards-v2 .np-priority>b{font-size:11px}.service-catalogue.product-cards-v2 .np-decision-brief{gap:12px;padding-top:12px}.service-catalogue.product-cards-v2 .np-decision-brief h6{font-size:11px}}
+
+.service-catalogue.product-cards-v2 .np-priority{padding-block:6px}
+.service-catalogue.product-cards-v2 .np-priority>b{line-height:1}

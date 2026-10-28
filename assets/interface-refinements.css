@@ -1,0 +1,20 @@
+/* Contact, language and publication controls in the existing SEPAR grammar. */
+.language-picker{position:relative;flex:none;font-family:var(--sans)}
+.language-picker [hidden]{display:none!important}
+.language-toggle{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-width:76px;min-height:44px;padding:9px 12px;font-family:inherit;font-size:17px;line-height:24px;font-weight:400;color:#111;background:transparent;border:1px solid #c7c7c7;border-radius:0;cursor:pointer}
+.language-toggle svg{width:12px;height:12px;transition:transform .15s ease}
+.language-toggle:hover,.language-toggle[aria-expanded=true]{border-color:#555;background:#f4f4f4}
+.language-toggle[aria-expanded=true] svg{transform:rotate(180deg)}
+.language-options{position:absolute;z-index:100;right:0;top:calc(100% + 8px);width:210px;padding:6px;background:#fff;border:1px solid #c7c7c7;box-shadow:0 5px 16px #0000000d}
+.language-option{display:flex;align-items:center;gap:18px;width:100%;min-height:44px;padding:10px 12px;text-align:left;font-family:inherit;font-size:16px;line-height:24px;color:#555;background:white;border:0;border-left:2px solid transparent;border-radius:0;cursor:pointer}
+.language-option>span:first-child{width:24px;flex:none;color:#111}
+.language-option[aria-selected=true],.language-option[aria-selected=true]:hover{background:#eceeed;color:#111;border-left-color:transparent}
+.language-option:hover{background:#f4f4f4;color:#111}
+.language-toggle:focus-visible,.language-option:focus-visible{outline:2px solid #555;outline-offset:2px}
+.button[data-contact],#address-request .button{font-family:var(--sans);font-size:18px;line-height:24px;font-weight:400;min-height:54px;padding:14px 20px;background:#fff;color:#111;border:1px solid #c7c7c7;border-radius:0;box-shadow:none}
+.button[data-contact]:hover,#address-request .button:hover{background:#f7f7f7;color:#111;border-color:#555}
+.preview-trigger,.preview-trigger:hover,.preview-trigger:focus,.preview-trigger:active,.preview-trigger[aria-expanded=true]{background:transparent;color:inherit;text-decoration:none;border-bottom:0;box-shadow:none}
+.preview-trigger .field-note-description,.preview-trigger:hover .field-note-description{background:transparent;text-decoration:none;border:0}
+.service-catalogue.product-cards-v2 .inventory-scope .case-meta{min-height:0;margin-bottom:12px}
+@media(max-width:360px){.language-toggle{min-width:68px;padding-inline:10px}.language-options{width:200px}}
+@media(prefers-reduced-motion:reduce){.language-toggle svg{transition:none}}
