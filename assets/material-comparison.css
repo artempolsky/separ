@@ -34,3 +34,20 @@
  .impact-value{font-size:16px;margin-bottom:7px}
 }
 @media print{.material-comparison{break-inside:avoid}.impact-track>span,.impact-row.is-reuse{print-color-adjust:exact}}
+
+/* Quiet material swatches; data, order and chart scales remain unchanged. */
+.impact-grid{grid-template-columns:minmax(186px,1.7fr) repeat(3,minmax(0,1fr))}
+.impact-row{height:82px}
+.impact-label{display:grid;grid-template-columns:32px minmax(0,1fr);align-items:center;gap:10px;font-size:15px}
+.impact-material-copy{display:block;min-width:0}
+.impact-label::before,.impact-mobile-label::before{content:"";display:block;width:32px;height:32px;background-image:url('material-texture-atlas.webp');background-size:300% 200%;background-position:var(--texture-x,0%) var(--texture-y,0%);box-shadow:inset 0 0 0 1px #00000012}
+.material-gravel{--texture-x:50%}
+.material-crushed{--texture-x:100%}
+.material-site{--texture-y:100%}
+.material-reuse{--texture-x:50%;--texture-y:100%}
+.material-masonry{--texture-x:100%;--texture-y:100%}
+@container(max-width:580px){
+ .impact-row{height:auto;min-height:72px}
+ .impact-mobile-label{display:grid;grid-template-columns:28px minmax(0,1fr);gap:9px;align-items:center;font-size:14px}
+ .impact-mobile-label::before{width:28px;height:28px}
+}
