@@ -3,12 +3,13 @@
   const dialog=document.querySelector('#contact-dialog');
   const form=document.querySelector('#enquiry-form');
   if(!dialog||!form)return;
-  const endpoint='https://formsubmit.co/ajax/089ee9a85209dfe73efe14147f015577';
+  const endpoint='/api/enquiry';
   const contexts=['general','inventory','portfolio','lending','territory','custom','advisory','research'];
   const topic=form.elements.topic, locationField=form.elements.address, message=form.elements.message;
   const submit=form.querySelector('[type="submit"]'), status=document.querySelector('#enquiry-status');
   const success=document.querySelector('#enquiry-success');
   const drafts=new Map();
+  let activeRequest=null;
   let current='general',source='header',pending=false,sent=false;
   const language=()=>document.documentElement.lang;
   const copy=()=>window.SEPAR_CONTACT_COPY[language()]||window.SEPAR_CONTACT_COPY.en;
@@ -31,7 +32,7 @@
     if(status.textContent)status.textContent=c.enquiryError;
   }
   function choose(context){
-    remember();current=contexts.includes(context)?context:'general';topic.value=current;
+    activeRequest=null;remember();current=contexts.includes(context)?context:'general';topic.value=current;
     const draft=drafts.get(current)||{address:'',message:''};
     locationField.value=draft.address;message.value=draft.message;status.textContent='';
     render();
@@ -59,7 +60,7 @@
     if(!address.value.trim()){address.value='';address.reportValidity();return;}
     open('inventory','address-assessment',address.value.trim());
   });
-  form.addEventListener('input',event=>event.target.setCustomValidity?.(''));
+  form.addEventListener('input',event=>{activeRequest=null;event.target.setCustomValidity?.('');});
   form.addEventListener('submit',async event=>{
     event.preventDefault();
     if(pending||sent)return;
@@ -70,29 +71,25 @@
     form.setAttribute('aria-busy','true');
     form.querySelector('fieldset').disabled=true;
     render();
-    const requestId=crypto.randomUUID();
+    const requestId=activeRequest ||= crypto.randomUUID();
     const data={
       name:form.elements.name.value,
       email:form.elements.email.value,
       phone:form.elements.phone.value,
       organisation:form.elements.organisation.value,
-      enquiry:window.SEPAR_CONTACT_COPY.en.topics[index()],
+      topic:current,
       address:locationField.value,
       message:message.value,
       language:language(),
       source:source,
       page:location.pathname,
       request_id:requestId,
-      _subject:'SEPAR enquiry: '+window.SEPAR_CONTACT_COPY.en.topics[index()],
-      _replyto:form.elements.email.value,
-      _template:'table',
-      _url:'https://separ.ch/',
       _honey:form.elements._honey.value
     };
     try {
       const response=await fetch(endpoint,{
         method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},
-        body:JSON.stringify(data),signal:AbortSignal.timeout(25000),credentials:'omit',referrerPolicy:'origin'
+        body:JSON.stringify(data),signal:AbortSignal.timeout(25000),credentials:'same-origin',referrerPolicy:'origin'
       });
       const result=await response.json();
       if(!response.ok||!(result.success===true||result.success==='true'))throw new Error('Unconfirmed submission');
