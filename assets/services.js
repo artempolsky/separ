@@ -12,7 +12,9 @@
       e.preventDefault();select(tabs[n],true);
     });
   });
-  select(tabs.find(t=>t.getAttribute('aria-selected')==='true')||tabs[0]);
+  const linkedTab=()=>tabs.find(t=>'#'+t.getAttribute('aria-controls')===location.hash);
+  select(linkedTab()||tabs.find(t=>t.getAttribute('aria-selected')==='true')||tabs[0]);
+  window.addEventListener('hashchange',()=>{const tab=linkedTab();if(tab)select(tab);});
   const orientation=matchMedia('(max-width:1100px)');
   const updateOrientation=()=>tabs[0].closest('[role="tablist"]').setAttribute('aria-orientation',orientation.matches?'horizontal':'vertical');
   orientation.addEventListener('change',updateOrientation);updateOrientation();

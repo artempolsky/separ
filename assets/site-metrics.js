@@ -2,7 +2,7 @@
 (() => {
  if(location.protocol!=='https:'||!['separ.ch','www.separ.ch'].includes(location.hostname))return;
  if(navigator.doNotTrack==='1'||navigator.globalPrivacyControl)return;
- const page=location.pathname.includes('reuseconrete')?'/reuseconrete.html':'/';
+ const page=document.body.dataset.page==='field-article'?'/reuseconrete.html':'/';
  let count=0,last='';
  const send=(event,detail)=>{
   if(count>=40||last===event+':'+detail)return;

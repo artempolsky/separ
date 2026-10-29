@@ -204,6 +204,7 @@
     pageTitle: document.title,
     metaDescription: document.querySelector('meta[name="description"]').content,
   });
+  Object.assign(defaults, window.SEPAR_SEARCH?.english || {});
   dictionaries.en = defaults;
   let currentLanguage = "en";
   const languageSelect = document.querySelector("#language");
@@ -252,6 +253,7 @@
       link.setAttribute('href', url.href);
     });
     localizeExternalLinks(language);
+    window.SEPAR_SEARCH?.update(language);
     try {
       localStorage.setItem("separ-language", language);
     } catch {
@@ -263,7 +265,8 @@
     initialLanguage = localStorage.getItem("separ-language") || "en";
   } catch {}
   const queryLanguage = new URLSearchParams(location.search).get("lang");
-  setLanguage(queryLanguage || initialLanguage);
+  const routeLanguage = location.pathname.match(/^\/(de|fr|it)(?:\/|$)/)?.[1] || 'en';
+  setLanguage(queryLanguage || (window.SEPAR_SEARCH && location.protocol!=='file:' ? routeLanguage : initialLanguage));
   languageSelect.addEventListener("change", (e) => setLanguage(e.target.value));
 
   // Shared disclosure behaviour for TRL and publication-status controls.

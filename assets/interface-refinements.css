@@ -18,3 +18,4 @@
 .service-catalogue.product-cards-v2 .inventory-scope .case-meta{min-height:0;margin-bottom:12px}
 @media(max-width:360px){.language-toggle{min-width:68px;padding-inline:10px}.language-options{width:200px}}
 @media(prefers-reduced-motion:reduce){.language-toggle svg{transition:none}}
+.language-option{text-decoration:none}

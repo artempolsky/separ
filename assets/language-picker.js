@@ -30,7 +30,8 @@
     }
   });
   options.forEach((option, index) => {
-    option.addEventListener('click', () => {
+    option.addEventListener('click', event => {
+      event.preventDefault();
       native.value = option.dataset.language;
       native.dispatchEvent(new Event('change', {bubbles: true}));
       sync();
