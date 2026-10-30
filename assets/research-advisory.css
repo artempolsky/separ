@@ -1,6 +1,6 @@
-/* SEPAR advisory offer, between the research vision and TRL roadmap. */
+/* SEPAR advisory offer. Violet surface tuned for the surrounding #d6d7d8; the white section uses #f5f5ff. */
 .research-concrete .research-values{margin-bottom:0}
-.research-concrete .research-advisory{display:grid;grid-template-columns:minmax(220px,.75fr) minmax(0,1.7fr) auto;gap:24px 32px;align-items:start;margin-top:40px;padding:28px 32px;border:1px solid var(--accent,#7474ff);background:#d6d7d8;box-shadow:0 0 12px #7474ff30,0 0 36px #7474ff24;scroll-margin-top:100px}
+.research-concrete .research-advisory{display:grid;grid-template-columns:minmax(220px,.75fr) minmax(0,1.7fr) auto;gap:24px 32px;align-items:start;margin-top:40px;padding:28px 32px;border:1px solid var(--accent,#7474ff);background:#dedeee;box-shadow:0 0 12px #7474ff30,0 0 36px #7474ff24;scroll-margin-top:100px}
 .research-concrete .research-advisory h4{font-family:var(--sans);font-size:clamp(24px,1.45vw,28px);line-height:1.25;font-weight:400;letter-spacing:-.015em;margin:0}
 .research-concrete .research-advisory p{font-size:18px;line-height:1.5;color:#333;margin:0;max-width:78ch}
 .research-concrete .research-advisory-contact{align-self:start;justify-self:start;white-space:nowrap}
