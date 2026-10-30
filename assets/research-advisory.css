@@ -1,8 +1,8 @@
-/* Compact research-to-practice bridge between the vision and TRL roadmap. */
+/* SEPAR advisory offer, between the research vision and TRL roadmap. */
 .research-concrete .research-values{margin-bottom:0}
-.research-concrete .research-advisory{display:grid;grid-template-columns:minmax(220px,.75fr) minmax(0,1.7fr) auto;gap:24px 32px;align-items:start;margin-top:40px;padding-top:24px;border-top:1px solid #a4a5a6;scroll-margin-top:100px}
-.research-concrete .research-advisory h4{font-family:var(--sans);font-size:clamp(22px,1.35vw,26px);line-height:1.25;font-weight:400;letter-spacing:-.015em;margin:0}
+.research-concrete .research-advisory{display:grid;grid-template-columns:minmax(220px,.75fr) minmax(0,1.7fr) auto;gap:24px 32px;align-items:start;margin-top:40px;padding:28px 32px;border:1px solid var(--accent,#7474ff);background:linear-gradient(115deg,#f5f5ff 0%,#fff 55%,#f2f2ff 100%);box-shadow:0 0 12px #7474ff30,0 0 36px #7474ff24;scroll-margin-top:100px}
+.research-concrete .research-advisory h4{font-family:var(--sans);font-size:clamp(24px,1.45vw,28px);line-height:1.25;font-weight:400;letter-spacing:-.015em;margin:0}
 .research-concrete .research-advisory p{font-size:18px;line-height:1.5;color:#333;margin:0;max-width:78ch}
 .research-concrete .research-advisory-contact{align-self:start;justify-self:start;white-space:nowrap}
 @media(max-width:1100px){.research-concrete .research-advisory{grid-template-columns:minmax(180px,.7fr) minmax(0,1.6fr);gap:16px 28px}.research-concrete .research-advisory-contact{grid-column:2}}
-@media(max-width:650px){.research-concrete .research-advisory{grid-template-columns:1fr;gap:12px;margin-top:32px;padding-top:24px}.research-concrete .research-advisory h4{font-size:23px}.research-concrete .research-advisory p{font-size:17px;line-height:1.5}.research-concrete .research-advisory-contact{grid-column:auto;margin-top:8px}}
+@media(max-width:650px){.research-concrete .research-advisory{grid-template-columns:1fr;gap:16px;margin-top:32px;padding:24px 20px;box-shadow:0 0 10px #7474ff30,0 0 24px #7474ff24}.research-concrete .research-advisory h4{font-size:24px}.research-concrete .research-advisory p{font-size:17px;line-height:1.5}.research-concrete .research-advisory-contact{grid-column:auto;margin-top:4px}}
